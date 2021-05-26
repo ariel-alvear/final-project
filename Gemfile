@@ -63,3 +63,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # user auth
 gem 'devise'
+
+# Entity Relation Diagram to see progress in app
+gem 'rails-erd', group: :development
