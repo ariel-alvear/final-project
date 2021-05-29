@@ -1,1 +1,10 @@
 <h1>Hola</h1>
+
+
+
+<% if current_user %>
+  <%= link_to 'Editar mis datos', edit_user_registration_path %>
+<% else %>
+  <%= link_to 'Inicia sesión', new_user_session_path %>
+  <%= link_to 'Registrarse', new_user_registration_path %>
+<% end %>

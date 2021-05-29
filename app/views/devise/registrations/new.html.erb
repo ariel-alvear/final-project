@@ -2,10 +2,37 @@
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
+  
+  <div class="field">
+    <%= f.label :nombre %><br />
+    <%= f.text_field :name %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :apellido %><br />
+    <%= f.text_field :last_name %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :rut_o_pasaporte %><br />
+    <%= f.text_field :document_id %>
+  </div>
+  <div class="field">
+    <%= f.radio_button :profile, 0, :checked => true %> 
+    <%= label :perfil_de_usuario, 'Ofreceré servicios para que agenden' %>
+    <%= f.radio_button :profile, 1 %>
+    <%= label :perfil_de_usuario, 'Agendaré servicios ofrecidos por profesionales' %>
+  </div>
+
+  <div class="field">
+    <%= collection_select(:user, :profesion_id, Profesion.all,
+                  :id, :name,
+                 {:prompt => 'Selecciona tu profesión'}) %>
+  </div>
 
   <div class="field">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.email_field :email %>
   </div>
 
   <div class="field">
