@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'workers/index'
   resources :avaible_hours
   resources :services
   devise_for :users
