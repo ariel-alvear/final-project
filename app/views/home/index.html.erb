@@ -10,6 +10,7 @@
 <% elsif current_user && @user.profile == 1 %>
   <%= link_to 'Revisar servicios disponibles', services_path %>
   <%= link_to 'Revisar profesionales disponibles', workers_index_path %>
+  <%= button_to "Logout", destroy_user_session_path, method: :delete %>
 <% else %>
   <%= link_to 'Inicia sesión', new_user_session_path %>
   <%= link_to 'Registrarse', new_user_registration_path %>
