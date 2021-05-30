@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  time: 2021-05-30 18:26:52
+  date: 2021-05-30
+  user: one
+
+two:
+  time: 2021-05-30 18:26:52
+  date: 2021-05-30
+  user: two

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :avaible_hours
   resources :services
   devise_for :users
 

@@ -4,6 +4,7 @@
 
 <% if current_user %>
   <%= link_to 'Mis servicios', services_path %>
+  <%= link_to 'Mis horas disponibles', avaible_hours_path %>
   <%= link_to 'Editar mis datos', edit_user_registration_path %>
 <% else %>
   <%= link_to 'Inicia sesión', new_user_session_path %>
