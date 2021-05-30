@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 2021_05_29_214554) do
   create_table "services", force: :cascade do |t|
     t.string "name"
     t.string "description"
-    t.time "duration"
+    t.integer "duration"
     t.decimal "price"
     t.bigint "user_id"
     t.datetime "created_at", null: false
