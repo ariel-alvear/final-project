@@ -5,11 +5,13 @@
 <% if current_user && @user.profile == 0 %>
   <%= link_to 'Mis servicios', services_path %>
   <%= link_to 'Mis horas disponibles', avaible_hours_path %>
+  <%= link_to 'Revisar mis horas agendadas', appointments_path %>
   <%= link_to 'Editar mis datos', edit_user_registration_path %>
   <%= button_to "Logout", destroy_user_session_path, method: :delete %>
 <% elsif current_user && @user.profile == 1 %>
   <%= link_to 'Revisar servicios disponibles', services_path %>
   <%= link_to 'Revisar profesionales disponibles', workers_index_path %>
+  <%= link_to 'Editar mis datos', edit_user_registration_path %>
   <%= button_to "Logout", destroy_user_session_path, method: :delete %>
 <% else %>
   <%= link_to 'Inicia sesión', new_user_session_path %>
