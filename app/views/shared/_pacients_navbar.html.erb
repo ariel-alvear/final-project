@@ -1,22 +1,22 @@
 <!-- Barra de navegación para usuarios de perfil paciente (1) -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-info">
   <a class="navbar-brand" href="<%= root_path %>">AWAP</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="<%= destroy_user_session_path, method: :delete %>">Finaliza sesión</a>
+      <li class="nav-item">
+        <%= link_to 'Finalizar sesión', destroy_user_session_path, method: :delete, class: 'text-white' %>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<%= appointments_path %>">Mis servicios agendados</a>
+        <%= link_to 'Mis servicios agendados', appointments_path, class: 'text-white' %>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<%= services_path %>">Servicios</a>
+        <%= link_to 'Servicios', services_path, class: 'text-white' %>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<%= workers_index_path %>">Profesionales</a>
+        <%= link_to 'Profesionales', workers_index_path, class: 'text-white' %>
       </li>
       <li class="nav-item">
         <a id='trigger-show-modal', class='btn btn-primary'>Mis datos</a>

@@ -1,6 +1,6 @@
 <h2>Editar mis datos</h2>
 
-<%= form_for @user, url: users_update_path do |f| %>
+<%= form_for @user, url: users_update_path, remote: true do |f| %>
 
   <div class="field">
     <%= f.label :nombre %><br />

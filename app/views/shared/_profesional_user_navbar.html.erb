@@ -1,25 +1,25 @@
 <!-- Barra de navegación para usuarios de perfil profesional (0) -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-info">
   <a class="navbar-brand" href="<%= root_path %>">AWAP</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
-      <li class="nav-item active">
-        <%= button_to 'Finalizar sesión', destroy_user_session_path, method: :delete, class: 'btn btn-primary' %>
+      <li class="nav-item">
+        <%= link_to 'Finalizar sesión', destroy_user_session_path, method: :delete, class: 'text-white' %>
       </li>
       <li class="nav-item">
-        <%= link_to 'Mis servicios', services_path, class: 'btn btn-primary' %>
+        <%= link_to 'Mis servicios', services_path, class: 'text-white' %>
       </li>
       <li class="nav-item">
-        <%= link_to 'Mis servicios agendados', services_path, class: 'btn btn-primary' %>
+        <%= link_to 'Mis servicios agendados', services_path, class: 'text-white' %>
       </li>
       <li class="nav-item">
-        <%= link_to 'Mis horas disponibles', avaible_hours_path,  class: 'btn btn-primary' %>
+        <%= link_to 'Mis horas disponibles', avaible_hours_path,  class: 'text-white' %>
       </li>
       <li class="nav-item">
-        <%= link_to 'Mis datos', edit_user_registration_path, id: 'trigger-show-modal', class: 'btn btn-primary' %>
+        <%= link_to 'Mis datos', edit_user_registration_path, id: 'trigger-show-modal', class: 'text-white' %>
       </li>
     </ul>
   </div>
