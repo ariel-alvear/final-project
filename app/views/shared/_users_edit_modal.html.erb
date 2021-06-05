@@ -1,6 +1,6 @@
 <h2>Editar mis datos</h2>
 
-<%= form_for @user, url: { action: "update", controller: "users" } do |f| %>
+<%= form_for @user, url: users_update_path do |f| %>
 
   <div class="field">
     <%= f.label :nombre %><br />
@@ -29,6 +29,6 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Update" %>
+    <%= f.submit "Actualizar datos", class: 'btn btn-primary', id: 'close-modal-user' %>
   </div>
 <% end %>

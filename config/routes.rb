@@ -10,5 +10,5 @@ Rails.application.routes.draw do
 
   root 'home#index'
 
-  post 'users/update'
+  patch 'users/update'
 end
