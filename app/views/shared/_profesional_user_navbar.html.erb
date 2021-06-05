@@ -10,16 +10,16 @@
         <%= button_to 'Finalizar sesión', destroy_user_session_path, method: :delete, class: 'btn btn-primary' %>
       </li>
       <li class="nav-item">
-        <%= button_to 'Mis servicios', services_path, class: 'btn btn-primary' %>
+        <%= link_to 'Mis servicios', services_path, class: 'btn btn-primary' %>
       </li>
       <li class="nav-item">
-        <%= button_to 'Mis servicios agendados', services_path, class: 'btn btn-primary' %>
+        <%= link_to 'Mis servicios agendados', services_path, class: 'btn btn-primary' %>
       </li>
       <li class="nav-item">
-        <%= button_to 'Mis horas disponibles', avaible_hours_path,  class: 'btn btn-primary' %>
+        <%= link_to 'Mis horas disponibles', avaible_hours_path,  class: 'btn btn-primary' %>
       </li>
       <li class="nav-item">
-        <%= button_to 'Mis datos', edit_user_registration_path, class: 'btn btn-primary' %>
+        <%= link_to 'Mis datos', edit_user_registration_path, id: 'trigger-show-modal', class: 'btn btn-primary' %>
       </li>
     </ul>
   </div>
