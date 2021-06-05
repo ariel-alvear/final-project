@@ -13,13 +13,13 @@
   <body>
     <% if current_user && @user.profile == 0 %>
       <%= render 'shared/profesional_user_navbar' %>
+      <%= render 'shared/empty_modal' %>
     <% elsif current_user && @user.profile == 1 %>
       <%= render 'shared/pacients_navbar' %>
+      <%= render 'shared/empty_modal' %>
     <% else %>
       <%= render 'shared/no_user_navbar' %>
     <% end %>
-
-    <%= render 'shared/empty_modal' %>
 
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
