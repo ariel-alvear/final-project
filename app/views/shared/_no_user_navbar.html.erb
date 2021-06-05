@@ -1,0 +1,31 @@
+<!-- Barra de navegación para usuarios no registrados -->
+<nav class="navbar navbar-expand-lg navbar-light bg-info">
+  <a class="navbar-brand" href="<%= root_path %>">AWAP</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item px-2">
+        <div>
+          <%= link_to 'Iniciar sesión', new_user_session_path, class: 'text-white' %>
+        </div>
+      </li>
+      <li class="nav-item px-2">
+        <div>
+          <%= link_to '¿No tienes usuario?', new_user_session_path, class: 'text-white' %>
+        </div>
+      </li>
+      <li class="nav-item px-2">
+        <div>
+          <%= link_to 'Servicios', services_path, class: 'text-white' %>
+        </div>
+      </li>
+      <li class="nav-item px-2">
+        <div>
+          <%= link_to 'Profesionales', workers_index_path, class: 'text-white' %>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
