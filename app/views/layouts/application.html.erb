@@ -10,6 +10,17 @@
   </head>
 
   <body>
+    <% if current_user.profile == 0 %>
+      <%= render 'shared/profesional_user_navbar' %>
+    <% elsif current_user.profile == 1 %>
+      <%= render 'shared/pacients_navbar' %>
+    <% else %>
+      <%= render 'shared/no_user_navbar' %>
+    <% end %>
+
+
+
+
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
